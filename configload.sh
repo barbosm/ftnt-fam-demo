@@ -8,13 +8,37 @@ devices=( "fgext.fam"
 	  "bo02.fam"
 	  "bo03.fam")
 
-for device in "${devices[@]}"
-do
-	echo $device
-	ssh admin@$device "
-	exec restore config ftp demo_files/$device.conf 192.168.0.1
-	y"
+device='fgext.fam'
+ssh admin@$device "
+exec restore config ftp demo_files/$device.conf 192.168.0.1
+y"
 
-done
+device='fgacct.fam'
+ssh admin@$device "
+exec restore config ftp demo_files/$device.conf 192.168.0.1
+y"
 
-chmod -R +r *
+device='fgmkt.fam'
+ssh admin@$device "
+exec restore config ftp demo_files/$device.conf 192.168.0.1
+y"
+
+device='fgsales.fam'
+ssh admin@$device "
+exec restore config ftp demo_files/$device.conf 192.168.0.1
+y"
+
+#device='bo01.fam'
+#ssh admin@$device "
+#exec restore config ftp demo_files/$device.conf 192.168.0.1
+#y"
+
+#device='bo02.fam'
+#ssh admin@$device "
+#exec restore config ftp demo_files/$device.conf 192.168.0.1
+#y"
+
+#device='bo03.fam'
+#ssh admin@$device "
+#exec restore config ftp demo_files/$device.conf 192.168.0.1
+#y"

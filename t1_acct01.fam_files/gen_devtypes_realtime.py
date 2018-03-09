@@ -6,7 +6,7 @@ import time
 import random
 
 hostsubnet = ['10.10.41.']
-serverip = '10.10.42.50'
+serverip = '10.10.42.15'
 devicecount = 16
 #devicecount = int(input("The number of device to created:"))
 
