@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# copy /etc/apt/sources.list 
+
 # run
 # apt install dnsmasq vsftpd git
 # apt install php libapache2-mod-php php-mcrypt php-mysql
