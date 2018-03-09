@@ -18,6 +18,7 @@ cp authorized_keys /root/.ssh/authorized_keys
 
 cp id_rsa.key_bastion /root/.ssh/id_rsa
 cp id_rsa.pub_bastion /root/.ssh/id_rsa.pub
+chmod 600 /root/.ssh/id_rsa
 
 #SSHD
 mv /etc/ssh/sshd_config /etc/ssh/sshd_config.ori

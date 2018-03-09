@@ -12,8 +12,8 @@ for device in "${devices[@]}"
 do
 	echo $device
 	ssh admin@$device "
-	exec backup config ftp /srv/ftp/demo_files/$device.conf 192.168.0.1 root fortinet
-	"
+	exec restore config ftp demo_files/$device.conf 192.168.0.1
+	y"
 
 done
 
